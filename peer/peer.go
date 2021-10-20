@@ -6,14 +6,14 @@ import (
 	"sync"
 	"time"
 
+	"github.com/bogatyr285/hlf-sdk-go/api"
+	"github.com/bogatyr285/hlf-sdk-go/api/config"
+	"github.com/bogatyr285/hlf-sdk-go/peer/deliver"
+	"github.com/bogatyr285/hlf-sdk-go/util"
 	"github.com/hyperledger/fabric-chaincode-go/shim"
 	fabricPeer "github.com/hyperledger/fabric-protos-go/peer"
 	"github.com/hyperledger/fabric/msp"
 	"github.com/pkg/errors"
-	"github.com/s7techlab/hlf-sdk-go/api"
-	"github.com/s7techlab/hlf-sdk-go/api/config"
-	"github.com/s7techlab/hlf-sdk-go/peer/deliver"
-	"github.com/s7techlab/hlf-sdk-go/util"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
 )

@@ -12,8 +12,8 @@ import (
 	_ "github.com/hyperledger/fabric/msp"
 	"github.com/pkg/errors"
 
-	"github.com/s7techlab/hlf-sdk-go/api"
-	"github.com/s7techlab/hlf-sdk-go/util"
+	"github.com/bogatyr285/hlf-sdk-go/api"
+	"github.com/bogatyr285/hlf-sdk-go/util"
 )
 
 type mspIdentity struct {

@@ -1,12 +1,12 @@
 package subs
 
 import (
+	"github.com/bogatyr285/hlf-sdk-go/util/txflags"
 	"github.com/hyperledger/fabric-protos-go/common"
 	"github.com/hyperledger/fabric-protos-go/peer"
-	"github.com/s7techlab/hlf-sdk-go/util/txflags"
 
-	"github.com/s7techlab/hlf-sdk-go/api"
-	utilSDK "github.com/s7techlab/hlf-sdk-go/util"
+	"github.com/bogatyr285/hlf-sdk-go/api"
+	utilSDK "github.com/bogatyr285/hlf-sdk-go/util"
 )
 
 func NewEventSubscription(cid string, fromTx api.ChaincodeTx) *EventSubscription {

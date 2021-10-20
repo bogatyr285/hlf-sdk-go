@@ -3,9 +3,9 @@ package fetcher
 import (
 	"context"
 
+	"github.com/bogatyr285/hlf-sdk-go/api"
 	"github.com/hyperledger/fabric-protos-go/peer"
 	"github.com/hyperledger/fabric/core/chaincode/platforms"
-	"github.com/s7techlab/hlf-sdk-go/api"
 )
 
 type localFetcher struct {

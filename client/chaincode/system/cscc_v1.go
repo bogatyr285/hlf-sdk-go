@@ -3,14 +3,14 @@ package system
 import (
 	"context"
 
+	"github.com/bogatyr285/hlf-sdk-go/api"
+	peerSDK "github.com/bogatyr285/hlf-sdk-go/peer"
 	"github.com/golang/protobuf/proto"
 	"github.com/hyperledger/fabric-protos-go/common"
 	"github.com/hyperledger/fabric-protos-go/peer"
 	"github.com/hyperledger/fabric/common/util"
 	"github.com/hyperledger/fabric/msp"
 	"github.com/pkg/errors"
-	"github.com/s7techlab/hlf-sdk-go/api"
-	peerSDK "github.com/s7techlab/hlf-sdk-go/peer"
 )
 
 // These are function names from Invoke first parameter

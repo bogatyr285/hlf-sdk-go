@@ -2,6 +2,7 @@ package chaincode
 
 import (
 	"context"
+
 	"github.com/hyperledger/fabric/common/policydsl"
 	"github.com/hyperledger/fabric/protoutil"
 
@@ -9,8 +10,8 @@ import (
 	"github.com/hyperledger/fabric/msp"
 	"github.com/pkg/errors"
 
+	"github.com/bogatyr285/hlf-sdk-go/api"
 	"github.com/hyperledger/fabric-protos-go/peer"
-	"github.com/s7techlab/hlf-sdk-go/api"
 )
 
 type corePackage struct {

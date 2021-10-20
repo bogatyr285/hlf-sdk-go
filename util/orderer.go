@@ -3,11 +3,11 @@ package util
 import (
 	"context"
 
+	"github.com/bogatyr285/hlf-sdk-go/api"
 	"github.com/hyperledger/fabric-protos-go/common"
 	"github.com/hyperledger/fabric/msp"
 	"github.com/hyperledger/fabric/protoutil"
 	"github.com/pkg/errors"
-	"github.com/s7techlab/hlf-sdk-go/api"
 )
 
 // GetConfigBlockFromOrderer returns config block from orderer by channel name

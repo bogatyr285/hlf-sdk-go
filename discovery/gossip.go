@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
+	"github.com/bogatyr285/hlf-sdk-go/api"
+	"github.com/bogatyr285/hlf-sdk-go/api/config"
+	"github.com/bogatyr285/hlf-sdk-go/util"
 	discClient "github.com/hyperledger/fabric/discovery/client"
-	"github.com/s7techlab/hlf-sdk-go/api"
-	"github.com/s7techlab/hlf-sdk-go/api/config"
-	"github.com/s7techlab/hlf-sdk-go/util"
 	"go.uber.org/zap"
 	"google.golang.org/grpc"
 )

@@ -3,7 +3,7 @@ package api
 import (
 	"context"
 
-	"github.com/s7techlab/hlf-sdk-go/api/config"
+	"github.com/bogatyr285/hlf-sdk-go/api/config"
 )
 
 type DiscoveryProvider interface {

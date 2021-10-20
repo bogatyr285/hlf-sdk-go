@@ -11,10 +11,10 @@ import (
 	"os"
 	"time"
 
-	apiCa "github.com/s7techlab/hlf-sdk-go/api/ca"
-	"github.com/s7techlab/hlf-sdk-go/ca"
-	_ "github.com/s7techlab/hlf-sdk-go/crypto/ecdsa"
-	"github.com/s7techlab/hlf-sdk-go/identity"
+	apiCa "github.com/bogatyr285/hlf-sdk-go/api/ca"
+	"github.com/bogatyr285/hlf-sdk-go/ca"
+	_ "github.com/bogatyr285/hlf-sdk-go/crypto/ecdsa"
+	"github.com/bogatyr285/hlf-sdk-go/identity"
 )
 
 func main() {

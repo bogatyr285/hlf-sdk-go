@@ -12,8 +12,8 @@ import (
 	"github.com/hyperledger/fabric/msp"
 	"github.com/pkg/errors"
 
-	"github.com/s7techlab/hlf-sdk-go/api"
-	peerSDK "github.com/s7techlab/hlf-sdk-go/peer"
+	"github.com/bogatyr285/hlf-sdk-go/api"
+	peerSDK "github.com/bogatyr285/hlf-sdk-go/peer"
 )
 
 type qscc struct {

@@ -7,15 +7,15 @@ import (
 	"io/ioutil"
 	"net/http"
 
+	"github.com/bogatyr285/hlf-sdk-go/api"
+	"github.com/bogatyr285/hlf-sdk-go/api/ca"
+	"github.com/bogatyr285/hlf-sdk-go/api/config"
+	"github.com/bogatyr285/hlf-sdk-go/crypto"
+	"github.com/bogatyr285/hlf-sdk-go/crypto/ecdsa"
 	"github.com/golang/protobuf/proto"
 	mspPb "github.com/hyperledger/fabric-protos-go/msp"
 	"github.com/hyperledger/fabric/msp"
 	"github.com/pkg/errors"
-	"github.com/s7techlab/hlf-sdk-go/api"
-	"github.com/s7techlab/hlf-sdk-go/api/ca"
-	"github.com/s7techlab/hlf-sdk-go/api/config"
-	"github.com/s7techlab/hlf-sdk-go/crypto"
-	"github.com/s7techlab/hlf-sdk-go/crypto/ecdsa"
 )
 
 type core struct {

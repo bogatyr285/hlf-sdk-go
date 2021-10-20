@@ -7,11 +7,11 @@ import (
 
 	"log"
 
+	"github.com/bogatyr285/hlf-sdk-go/api"
+	"github.com/bogatyr285/hlf-sdk-go/client"
+	_ "github.com/bogatyr285/hlf-sdk-go/crypto/ecdsa"
+	"github.com/bogatyr285/hlf-sdk-go/identity"
 	"github.com/hyperledger/fabric/common/util"
-	"github.com/s7techlab/hlf-sdk-go/api"
-	"github.com/s7techlab/hlf-sdk-go/client"
-	_ "github.com/s7techlab/hlf-sdk-go/crypto/ecdsa"
-	"github.com/s7techlab/hlf-sdk-go/identity"
 	"go.uber.org/zap"
 )
 

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/bogatyr285/hlf-sdk-go/api/ca"
 	"github.com/pkg/errors"
-	"github.com/s7techlab/hlf-sdk-go/api/ca"
 )
 
 const (

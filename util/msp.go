@@ -10,8 +10,8 @@ import (
 	"io/ioutil"
 	"path"
 
+	"github.com/bogatyr285/hlf-sdk-go/api"
 	"github.com/pkg/errors"
-	"github.com/s7techlab/hlf-sdk-go/api"
 )
 
 const (
