@@ -14,16 +14,11 @@ type Config struct {
 	Discovery DiscoveryConfig    `yaml:"discovery"`
 	MSP       []MSPConfig        `yaml:"msp"`
 	Pool      PoolConfig         `yaml:"pool"`
+	// if tls is enabled maps TLS certs to discovered peers
+	TLSCertsMap []TLSCertsMapperConfig `yaml:"tls_certs_map"`
 }
 
 type ConnectionConfig struct {
-	Host    string     `yaml:"host"`
-	Tls     TlsConfig  `yaml:"tls"`
-	GRPC    GRPCConfig `yaml:"grpc"`
-	Timeout Duration   `yaml:"timeout"`
-}
-
-type OrdererConfig struct {
 	Host    string     `yaml:"host"`
 	Tls     TlsConfig  `yaml:"tls"`
 	GRPC    GRPCConfig `yaml:"grpc"`
@@ -74,11 +69,30 @@ type TlsConfig struct {
 }
 
 type DiscoveryConfig struct {
-	Type    string              `yaml:"type"`
+	Type string `yaml:"type"`
+	// connection to local MSP which will be used for gossip discovery
+	DiscoveryMSPConnection ConnectionConfig `yaml:"discovery_msp_connection"`
+	// configuration of channels/chaincodes in local(from config) discovery type
 	Options DiscoveryConfigOpts `yaml:"options"`
 }
 
+// DiscoveryConfigOpts - channel configuration for local config
+// contains []DiscoveryChannel
 type DiscoveryConfigOpts map[string]interface{}
+
+type DiscoveryChannel struct {
+	Name        string               `json:"channel_name" yaml:"name"`
+	Description string               `json:"channel_description" yaml:"description"`
+	Chaincodes  []DiscoveryChaincode `json:"chaincodes" yaml:"description"`
+	Orderers    []ConnectionConfig   `json:"orderers" yaml:"orderers"`
+}
+
+type DiscoveryChaincode struct {
+	Name        string `json:"chaincode_name" yaml:"name"`
+	Version     string `json:"version"`
+	Description string `json:"description"`
+	Policy      string `json:"policy"`
+}
 
 type CryptoConfig struct {
 	Type    string          `yaml:"type"`
@@ -89,6 +103,11 @@ type CryptoSuiteOpts map[string]interface{}
 
 type Duration struct {
 	time.Duration
+}
+
+type TLSCertsMapperConfig struct {
+	Address   string    `yaml:"address"`
+	TlsConfig TlsConfig `yaml:"tls_config"`
 }
 
 func (d *Duration) UnmarshalYAML(unmarshal func(interface{}) error) error {
